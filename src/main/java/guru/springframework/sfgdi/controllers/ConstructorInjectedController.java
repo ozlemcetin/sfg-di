@@ -12,7 +12,7 @@ public class ConstructorInjectedController {
     /*
        @Autowired annotation on the constructor is optional
      */
-    public ConstructorInjectedController(@Qualifier("greetingServiceENImpl") GreetingService greetingService) {
+    public ConstructorInjectedController( @Qualifier("greetingServiceDEImpl")  GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 

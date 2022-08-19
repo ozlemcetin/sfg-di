@@ -15,7 +15,6 @@ public class SfgDiApplication {
 
         ApplicationContext ctx = SpringApplication.run(SfgDiApplication.class, args);
 
-
         {
             System.out.println("---MyController");
             MyController myController = (MyController) ctx.getBean("myController");
@@ -34,13 +33,11 @@ public class SfgDiApplication {
             System.out.println(setterInjectedController.getGreetingMessage());
         }
 
-
         {
             System.out.println("---ConstructorInjectedController");
             ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController) ctx.getBean("constructorInjectedController");
             System.out.println(constructorInjectedController.getGreetingMessage());
         }
-
     }
 
 }

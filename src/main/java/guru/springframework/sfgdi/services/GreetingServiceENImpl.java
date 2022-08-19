@@ -8,6 +8,6 @@ import org.springframework.stereotype.Service;
 public class GreetingServiceENImpl implements GreetingService {
     @Override
     public String sayGreeting() {
-        return "Inside GreetingServiceENImpl: Good morning!";
+        return "Inside Primary GreetingServiceENImpl: Good morning!";
     }
 }

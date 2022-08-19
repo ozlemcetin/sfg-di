@@ -15,26 +15,28 @@ public class SfgDiApplication {
 
         ApplicationContext ctx = SpringApplication.run(SfgDiApplication.class, args);
 
-        System.out.println("---MyController");
+
         {
+            System.out.println("---MyController");
             MyController myController = (MyController) ctx.getBean("myController");
             System.out.println(myController.sayHello());
         }
 
-        System.out.println("---PropertyInjectedController");
         {
+            System.out.println("---PropertyInjectedController");
             PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx.getBean("propertyInjectedController");
             System.out.println(propertyInjectedController.getGreetingMessage());
         }
 
-        System.out.println("---SetterInjectedController");
         {
+            System.out.println("---SetterInjectedController");
             SetterInjectedController setterInjectedController = (SetterInjectedController) ctx.getBean("setterInjectedController");
             System.out.println(setterInjectedController.getGreetingMessage());
         }
 
-        System.out.println("---ConstructorInjectedController");
+
         {
+            System.out.println("---ConstructorInjectedController");
             ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController) ctx.getBean("constructorInjectedController");
             System.out.println(constructorInjectedController.getGreetingMessage());
         }

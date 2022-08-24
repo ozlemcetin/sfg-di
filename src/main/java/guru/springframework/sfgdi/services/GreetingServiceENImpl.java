@@ -1,8 +1,5 @@
 package guru.springframework.sfgdi.services;
 
-import org.springframework.context.annotation.Primary;
-import org.springframework.stereotype.Service;
-
 /*
     Consider marking one of the beans as @Primary,
     updating the consumer to accept multiple beans,

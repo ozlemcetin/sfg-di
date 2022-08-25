@@ -17,6 +17,11 @@ public class GreetingServiceConfig {
         By default, the bean's name generated in the context is going to be the name of the method
         Default, the class name as the method name
      */
+    @Primary
+    @Bean
+    GreetingServiceENImpl greetingServiceENImpl() {
+        return new GreetingServiceENImpl();
+    }
 
     @Bean
     GreetingServiceDEImpl greetingServiceDEImpl() {
@@ -33,11 +38,6 @@ public class GreetingServiceConfig {
         return new GreetingServiceFRImpl();
     }
 
-    @Primary
-    @Bean
-    GreetingServiceENImpl greetingServiceENImpl() {
-        return new GreetingServiceENImpl();
-    }
 
     /*
         to define @Service("i18nService")
@@ -45,26 +45,24 @@ public class GreetingServiceConfig {
 
     @Profile({"EN", "default"})
     @Bean
-    GreetingServiceI18nEnglishImpl i18nService(GreetingRepository repository) {
+    GreetingService i18nService(GreetingRepository repository) {
         return new GreetingServiceI18nEnglishImpl(repository);
     }
-
 
     @Bean
     GreetingRepository greetingRepository() {
         return new EnglishGreetingRepository();
     }
 
-
     @Profile({"ES"})
     @Bean("i18nService")
-    GreetingServiceI18nSpanishImpl greetingServiceI18nSpanish() {
+    GreetingService greetingServiceI18nSpanish() {
         return new GreetingServiceI18nSpanishImpl();
     }
 
     @Profile("FR")
     @Bean("i18nService")
-    GreetingServiceI18nFrenchImpl greetingServiceI18nFrench() {
+    GreetingService greetingServiceI18nFrench() {
         return new GreetingServiceI18nFrenchImpl();
     }
 }

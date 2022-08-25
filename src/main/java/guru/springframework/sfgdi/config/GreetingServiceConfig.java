@@ -1,6 +1,8 @@
 package guru.springframework.sfgdi.config;
 
 
+import guru.springframework.sfgdi.repositories.EnglishGreetingRepository;
+import guru.springframework.sfgdi.repositories.GreetingRepository;
 import guru.springframework.sfgdi.services.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -43,9 +45,16 @@ public class GreetingServiceConfig {
 
     @Profile({"EN", "default"})
     @Bean
-    GreetingServiceI18nEnglishImpl i18nService() {
-        return new GreetingServiceI18nEnglishImpl();
+    GreetingServiceI18nEnglishImpl i18nService(GreetingRepository repository) {
+        return new GreetingServiceI18nEnglishImpl(repository);
     }
+
+
+    @Bean
+    GreetingRepository greetingRepository() {
+        return new EnglishGreetingRepository();
+    }
+
 
     @Profile({"ES"})
     @Bean("i18nService")

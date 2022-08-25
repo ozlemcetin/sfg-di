@@ -10,6 +10,7 @@ package guru.springframework.sfgdi.services;
 //@Primary
 //@Service -> moved to GreetingServiceConfig.java
 public class GreetingServiceENImpl implements GreetingService {
+
     @Override
     public String sayGreeting() {
         return "Inside Primary GreetingServiceENImpl: Good morning!";

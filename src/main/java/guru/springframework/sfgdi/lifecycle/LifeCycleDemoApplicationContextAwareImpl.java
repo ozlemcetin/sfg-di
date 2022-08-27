@@ -1,8 +1,6 @@
-package guru.springframework.sfgdi.component;
+package guru.springframework.sfgdi.lifecycle;
 
 import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;

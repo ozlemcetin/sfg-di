@@ -1,4 +1,4 @@
-package guru.springframework.sfgdi.component;
+package guru.springframework.sfgdi.lifecycle;
 
 import org.springframework.stereotype.Component;
 

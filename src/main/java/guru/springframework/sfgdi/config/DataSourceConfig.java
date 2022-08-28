@@ -26,7 +26,7 @@ public class DataSourceConfig {
      */
 
     /*
-        To overwrite the property values:
+        To overwrite the property values in .properties files :
 
         Edit Configurtaions > Environment variables: > GURU_USERNAME=UserFromEnvVar!
         getUsername : UserFromEnvVar!

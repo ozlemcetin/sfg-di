@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 
 //@PropertySource("classpath:datasource.properties")
 @Configuration
-public class DataSourceConfig {
+public class DataSourceConfigFromFiles {
 
     /*
         @PropertySource("classpath:datasource.properties")

@@ -1,11 +1,25 @@
 #Spring Boot application.yml
 #spring boot property to set the active profile
 spring:
-  profiles:
-    #Through the naming of the files Spring Boot is able to detect what profile those .yml files are applied to
-    active: FR,cat,dev
+  profiles: #Through the naming of the files Spring Boot is able to detect what profile those .yml files are applied to
+    active:
+      - FR
+      - cat
+      - prod
 #user defined properties to set the fake data source
 guru:
-  username: ymlSuperuser
-  password: ymlDbPassword
+  username: ymlDBUser
+  password: ymlDBPassword
   jdbcurl: ymlSomeUrlForDB
+
+
+---
+#Three dashes say this is an another configuration file in yml
+#We're telling yml that this section of the yml file is for the profile prod
+spring:
+  profiles: prod
+
+guru:
+  username: ymlPRODDBUser
+  password: ymlPRODDBPassword
+  jdbcurl: ymlPRODSomeUrlForDB

@@ -4,14 +4,14 @@ import guru.springframework.sfgdi.datasource.FakeDataSource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
 
-@PropertySource("classpath:datasource.properties")
+//@PropertySource("classpath:datasource.properties")
 @Configuration
 public class DataSourceConfig {
 
     /*
-        datasource.properties
+        @PropertySource("classpath:datasource.properties")
+
         guru.username =superuser
         guru.password=dbPassword
         guru.jdbcurl=someUrlForDB

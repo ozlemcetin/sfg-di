@@ -24,6 +24,19 @@ public class DataSourceConfig {
 
         close the value in ${} to make it Spring EL.
      */
+
+    /*
+        To overwrite the property values:
+
+        Edit Configurtaions > Environment variables: > GURU_USERNAME=UserFromEnvVar!
+        getUsername : UserFromEnvVar!
+     */
+
+    /*
+       Edit Configurtaions > Program arguments: > --guru.password=PwdFromCmdLine --guru.username=UserFromCmdLine
+       getUsername : UserFromCmdLine
+       getPassword : PwdFromCmdLine
+    */
     @Bean
     FakeDataSource fakeDataSource(@Value("${guru.username}") String username, @Value("${guru.password}") String password, @Value("${guru.jdbcurl}") String jdbcurl) {
         return new FakeDataSource(username, password, jdbcurl);

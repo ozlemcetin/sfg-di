@@ -6,7 +6,6 @@ import guru.springframework.sfgdi.repositories.GreetingRepository;
 //@Service("i18nService") -> moved to GreetingServiceConfig.java
 public class GreetingServiceI18nEnglishImpl implements GreetingService {
 
-
     private final GreetingRepository repository;
 
     public GreetingServiceI18nEnglishImpl(GreetingRepository repository) {

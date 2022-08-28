@@ -1,6 +1,6 @@
 package guru.springframework.sfgdi.config;
 
-import guru.springframework.sfgdi.datasource.FakeDataSource;
+import guru.springframework.sfgdi.datasource.FakeDataSourceConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -38,7 +38,7 @@ public class DataSourceConfigFromFiles {
        getPassword : PwdFromCmdLine
     */
     @Bean
-    FakeDataSource fakeDataSource(@Value("${guru.username}") String username, @Value("${guru.password}") String password, @Value("${guru.jdbcurl}") String jdbcurl) {
-        return new FakeDataSource(username, password, jdbcurl);
+    FakeDataSourceConstructor fakeDataSourceConstructor(@Value("${guru.username}") String username, @Value("${guru.password}") String password, @Value("${guru.jdbcurl}") String jdbcurl) {
+        return new FakeDataSourceConstructor(username, password, jdbcurl);
     }
 }

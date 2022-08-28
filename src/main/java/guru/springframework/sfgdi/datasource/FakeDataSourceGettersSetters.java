@@ -1,14 +1,11 @@
-package guru.springframework.sfgdi.config;
+package guru.springframework.sfgdi.datasource;
 
-import guru.springframework.sfgdi.datasource.FakeDataSource;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @ConfigurationProperties("guru")
 @Configuration
-public class DataSourceConfigFromProperties {
+public class FakeDataSourceGettersSetters {
 
     /*
         @ConfigurationProperties("guru") will go out and look for properties that begin with guru and then bind them

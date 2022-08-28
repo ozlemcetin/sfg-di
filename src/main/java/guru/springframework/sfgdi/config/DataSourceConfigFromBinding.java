@@ -1,12 +1,12 @@
 package guru.springframework.sfgdi.config;
 
-import guru.springframework.sfgdi.datasource.FakeDataSourceBinding;
+import guru.springframework.sfgdi.datasource.FakeDataSourceConstructorBinding;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
-@EnableConfigurationProperties(FakeDataSourceBinding.class)
+@EnableConfigurationProperties(FakeDataSourceConstructorBinding.class)
 @Configuration
-public class DataSourceConfigFromConstructor {
+public class DataSourceConfigFromBinding {
 
 
     /*

@@ -3,6 +3,7 @@ package guru.springframework.sfgdi;
 import guru.springframework.sfgdi.config.DataSourceConfigFromProperties;
 import guru.springframework.sfgdi.controllers.*;
 import guru.springframework.sfgdi.datasource.FakeDataSource;
+import guru.springframework.sfgdi.datasource.FakeDataSourceBinding;
 import guru.springframework.sfgdi.scope.PrototypeBean;
 import guru.springframework.sfgdi.scope.SingletonBean;
 import org.springframework.boot.SpringApplication;
@@ -77,14 +78,27 @@ public class SfgDiApplication {
 
         {
             {
+                System.out.println("---FakeDataSource");
                 FakeDataSource bean = ctx.getBean(FakeDataSource.class);
+
                 System.out.println("getUsername : " + bean.getUsername());
                 System.out.println("getPassword : " + bean.getPassword());
                 System.out.println("getJdbcurl : " + bean.getJdbcurl());
             }
 
             {
+                System.out.println("---DataSourceConfigFromProperties");
                 DataSourceConfigFromProperties bean = ctx.getBean(DataSourceConfigFromProperties.class);
+
+                System.out.println("getUsername : " + bean.getUsername());
+                System.out.println("getPassword : " + bean.getPassword());
+                System.out.println("getJdbcurl : " + bean.getJdbcurl());
+            }
+
+            {
+                System.out.println("---FakeDataSourceBinding");
+                FakeDataSourceBinding bean = ctx.getBean(FakeDataSourceBinding.class);
+
                 System.out.println("getUsername : " + bean.getUsername());
                 System.out.println("getPassword : " + bean.getPassword());
                 System.out.println("getJdbcurl : " + bean.getJdbcurl());

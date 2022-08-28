@@ -1,0 +1,5 @@
+#user defined properties to set the fake data source
+guru:
+  username: ymlQaDBUser
+  password: ymlQaDBPassword
+  jdbcurl: yQmlaSomeUrlForDB

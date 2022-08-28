@@ -1,0 +1,10 @@
+#Spring Boot application.yml
+#spring boot property to set the active profile
+spring:
+  profiles:
+    active: FR,cat,qa
+#user defined properties to set the fake data source
+guru:
+  username: superuser
+  password: dbPassword
+  jdbcurl: someUrlForDB
